@@ -696,11 +696,11 @@ INIT_FUNC_NAME(void)
 {
     PyObject *m;
 
-    Py_TYPE(&blake2bType) = &PyType_Type;
+    Py_SET_TYPE(&blake2bType, &PyType_Type);
     if (PyType_Ready(&blake2bType) < 0)
         INIT_ERROR;
 
-    Py_TYPE(&blake2sType) = &PyType_Type;
+    Py_SET_TYPE(&blake2sType, &PyType_Type);
     if (PyType_Ready(&blake2sType) < 0)
         INIT_ERROR;
 
